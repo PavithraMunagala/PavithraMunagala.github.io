@@ -1,0 +1,391 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatable" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <style>
+           *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        body{
+            background: #1f242d;
+        }
+        .header{
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10px;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            margin-top: 30px;
+        }
+        .logo{
+            font-size: 30px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: default;
+            opacity: 0;
+            animation: slideRight 1s ease forwards; 
+            margin-left: 90px;
+        }
+        .navbar ul li{
+            list-style: none;
+            display: inline-block;
+        }
+        .navbar ul li a{
+            
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
+            margin: 30px;
+            font-weight: 500;
+            transition: 0.3s;
+            animation: slideTop .5s ease forwards;
+            animation-delay: calc(.2s * var(--i));
+        }
+        .navbar ul li a::after{
+            content: '';
+            width: 0;
+            height: 2px;
+            background: #00C4FF;
+            display: block;
+            margin: 0px;
+            transition: 0.5s;
+            margin-left: 25px;
+            
+    
+        }
+        .navbar ul li a:hover::after{
+            width: 78%;
+            
+        }
+        @keyframes slideRight{
+            0%{
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+        @keyframes slideTop{
+            0%{
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+        @keyframes slideRight{
+            0%{
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+   
+        @keyframes slideBottom{
+            0%{
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+        .navbar .bx{
+            color: #1f242d;
+        }
+        .container{
+           width: 600px;
+           height: 700px;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           margin-left: 500px;
+         
+          
+          
+        }
+        form{
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 2vw 4vw;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+        form h3{
+            color: #555;
+            font-weight: 800;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        form input, form textarea{
+            border: 0;
+            margin: 10px 0;
+            padding: 20px;
+            outline: none;
+            background: #f5f5f5;
+            font-size: 16px;
+        }
+        form button{
+            padding: 15px;
+            background: #ff5361;
+            color: #fff;
+            font-size: 18px;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            width: 150px;
+            margin: 20px auto 0;
+            border-radius: 30px;
+        }
+       
+
+
+
+
+      /*media*/
+
+
+
+
+
+
+
+
+
+        @media (max-width: 600px){
+            *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           
+        }
+        body{
+            background: #1f242d;
+        }
+        .header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 12px 5px;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        span{
+            color: #00C4FF;
+        }
+        .logo{
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: default;
+            opacity: 0;
+            animation: slideRight 1s ease forwards; 
+            margin-left: 30px;
+        }
+        @keyframes slideRight{
+            0%{
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+        @keyframes slideTop{
+            0%{
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+        @keyframes slideBottom{
+            0%{
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+        .nav-links ul li{
+            display: block;
+           margin-top: 18px;
+        }
+        .nav-links{
+            position: absolute;
+            background: #071952;
+            height: 100vh;
+            width: 50%;
+            top: 0;
+            right: -250px;
+            text-align: left;
+            z-index: 2;
+            margin-top: -20px;
+           
+
+        }
+      
+        .navbar ul li a::after{
+            content: '';
+            width: 0;
+            height: 2px;
+            background: red;
+            display: block;
+            margin: 0px;
+            transition: 0.5s;
+            margin-left: 25px;
+        }
+        .navbar ul li a:hover::after{
+            width: 30%;
+        }
+        .nav-links .bx{
+            display: block;
+            color: #fff;
+           
+            font-size: 28px;
+            cursor: pointer;
+            margin-right: 30px;
+        }
+        #menu{
+            display: block;
+            color: #fff;
+           
+            font-size: 28px;
+            cursor: pointer;
+            margin-right: 30px;
+            
+        }
+        .nav-links #back{
+            margin-left: 15px;
+            margin-top: 10px;
+        }
+        .nav-links ul{
+           padding: 2px;
+        }
+        .container{
+           width: 400px;
+           height: 500px;
+           display: flex;
+           align-items: center;
+           justify-content: center; 
+           margin-left: 30px;
+           margin-top: 150px;
+        }
+      
+        form{
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 2vw 4vw;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+        form h3{
+            color: #555;
+            font-weight: 800;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+        form input, form textarea{
+            border: 0;
+            margin: 10px 0;
+            padding: 20px;
+            outline: none;
+            background: #f5f5f5;
+            font-size: 16px;
+        }
+        form button{
+            padding: 10px;
+            background: #ff5361;
+            color: #fff;
+            font-size: 17px;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            width: 100px;
+            margin: 10px auto 0;
+            border-radius: 30px;
+        }
+       
+    }
+      </style>
+    </head>
+    <body>
+        <header class="header">
+            <a href="#" class="logo">Portfolio.</a>
+            <nav class="navbar">
+                <div class="nav-links" id="navLinks">
+                  <i class='bx bx-arrow-back' id="back" onclick="hideMenu()" ></i>
+                  <ul>
+                  <li><a href="index.html" style="--i:1;" class="active">Home</a></li>
+                  <li><a href="about.html" style="--i:3;">About</a></li>
+                  <li><a href="skills.html" style="--i:4;">Skills</a></li>
+                  <li><a href="contact.html" style="--i:5;">Contact</a></li>
+                   </ul>
+                </div>
+                <i class='bx bx-menu' id="menu" onclick="showMenu()"></i>
+              </nav>
+    </header>
+    <div class="box">
+         <div class="container">
+            <form action="mailto:samskruthipavi1234@gmail.com" method="POST" enctype="text/plain">
+                <h3>GET IN TOUCH</h3>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Email id" required>
+                <input type="text" id="phone" name="phone" placeholder="Phone no." required>
+                <textarea id="message" name="message" rows="4" placeholder="How can we help you?"></textarea>
+                <button type="submit">Send</button>
+            </form>
+            
+        </div>
+    </div>
+  
+        <script>
+         var navlinks = document.getElementById("navLinks");
+            function showMenu(){
+               navLinks.style.right = "0"; 
+            }
+            function hideMenu(){
+               navLinks.style.right = "-250px";
+          }
+       
+           </script>
+    </body>
+  
+        
+</html>
